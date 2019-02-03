@@ -6,6 +6,432 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "TAS_RP_INSERT_DATE",
+				"type": "String"
+			},
+			{
+				"name": "TAS_RP_CHANGE_DATE",
+				"type": "String"
+			},
+			{
+				"name": "TAS_RP_OPCODE",
+				"type": "String"
+			},
+			{
+				"name": "TAS_RP_CYCLEID",
+				"type": "String"
+			},
+			{
+				"name": "TAS_RP_COMMIT_SCN",
+				"type": "String"
+			},
+			{
+				"name": "CLIENT",
+				"type": "String"
+			},
+			{
+				"name": "ADDRNUMBER",
+				"type": "String"
+			},
+			{
+				"name": "DATE_FROM",
+				"type": "String"
+			},
+			{
+				"name": "NATION",
+				"type": "String"
+			},
+			{
+				"name": "DATE_TO",
+				"type": "String"
+			},
+			{
+				"name": "TITLE1",
+				"type": "String"
+			},
+			{
+				"name": "NAME1",
+				"type": "String"
+			},
+			{
+				"name": "NAME2",
+				"type": "String"
+			},
+			{
+				"name": "NAME3",
+				"type": "String"
+			},
+			{
+				"name": "NAME4",
+				"type": "String"
+			},
+			{
+				"name": "NAME_TEXT",
+				"type": "String"
+			},
+			{
+				"name": "NAME_CO",
+				"type": "String"
+			},
+			{
+				"name": "CITY1",
+				"type": "String"
+			},
+			{
+				"name": "CITY2",
+				"type": "String"
+			},
+			{
+				"name": "CITY_CODE",
+				"type": "String"
+			},
+			{
+				"name": "CITYP_CODE",
+				"type": "String"
+			},
+			{
+				"name": "HOME_CITY",
+				"type": "String"
+			},
+			{
+				"name": "CITYH_CODE",
+				"type": "String"
+			},
+			{
+				"name": "CHCKSTATUS",
+				"type": "String"
+			},
+			{
+				"name": "REGIOGROUP",
+				"type": "String"
+			},
+			{
+				"name": "POST_CODE1",
+				"type": "String"
+			},
+			{
+				"name": "POST_CODE2",
+				"type": "String"
+			},
+			{
+				"name": "POST_CODE3",
+				"type": "String"
+			},
+			{
+				"name": "PCODE1_EXT",
+				"type": "String"
+			},
+			{
+				"name": "PCODE2_EXT",
+				"type": "String"
+			},
+			{
+				"name": "PCODE3_EXT",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX",
+				"type": "String"
+			},
+			{
+				"name": "DONT_USE_P",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX_NUM",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX_LOC",
+				"type": "String"
+			},
+			{
+				"name": "CITY_CODE2",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX_REG",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX_CTY",
+				"type": "String"
+			},
+			{
+				"name": "POSTALAREA",
+				"type": "String"
+			},
+			{
+				"name": "TRANSPZONE",
+				"type": "String"
+			},
+			{
+				"name": "STREET",
+				"type": "String"
+			},
+			{
+				"name": "DONT_USE_S",
+				"type": "String"
+			},
+			{
+				"name": "STREETCODE",
+				"type": "String"
+			},
+			{
+				"name": "STREETABBR",
+				"type": "String"
+			},
+			{
+				"name": "HOUSE_NUM1",
+				"type": "String"
+			},
+			{
+				"name": "HOUSE_NUM2",
+				"type": "String"
+			},
+			{
+				"name": "HOUSE_NUM3",
+				"type": "String"
+			},
+			{
+				"name": "STR_SUPPL1",
+				"type": "String"
+			},
+			{
+				"name": "STR_SUPPL2",
+				"type": "String"
+			},
+			{
+				"name": "STR_SUPPL3",
+				"type": "String"
+			},
+			{
+				"name": "LOCATION",
+				"type": "String"
+			},
+			{
+				"name": "BUILDING",
+				"type": "String"
+			},
+			{
+				"name": "FLOOR",
+				"type": "String"
+			},
+			{
+				"name": "ROOMNUMBER",
+				"type": "String"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "LANGU",
+				"type": "String"
+			},
+			{
+				"name": "REGION",
+				"type": "String"
+			},
+			{
+				"name": "ADDR_GROUP",
+				"type": "String"
+			},
+			{
+				"name": "FLAGGROUPS",
+				"type": "String"
+			},
+			{
+				"name": "PERS_ADDR",
+				"type": "String"
+			},
+			{
+				"name": "SORT1",
+				"type": "String"
+			},
+			{
+				"name": "SORT2",
+				"type": "String"
+			},
+			{
+				"name": "SORT_PHN",
+				"type": "String"
+			},
+			{
+				"name": "DEFLT_COMM",
+				"type": "String"
+			},
+			{
+				"name": "TEL_NUMBER",
+				"type": "String"
+			},
+			{
+				"name": "TEL_EXTENS",
+				"type": "String"
+			},
+			{
+				"name": "FAX_NUMBER",
+				"type": "String"
+			},
+			{
+				"name": "FAX_EXTENS",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM2",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM3",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM4",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM5",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM6",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM7",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM8",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM9",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM10",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM11",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM12",
+				"type": "String"
+			},
+			{
+				"name": "FLAGCOMM13",
+				"type": "String"
+			},
+			{
+				"name": "ADDRORIGIN",
+				"type": "String"
+			},
+			{
+				"name": "MC_NAME1",
+				"type": "String"
+			},
+			{
+				"name": "MC_CITY1",
+				"type": "String"
+			},
+			{
+				"name": "MC_STREET",
+				"type": "String"
+			},
+			{
+				"name": "EXTENSION1",
+				"type": "String"
+			},
+			{
+				"name": "EXTENSION2",
+				"type": "String"
+			},
+			{
+				"name": "TIME_ZONE",
+				"type": "String"
+			},
+			{
+				"name": "TAXJURCODE",
+				"type": "String"
+			},
+			{
+				"name": "ADDRESS_ID",
+				"type": "String"
+			},
+			{
+				"name": "LANGU_CREA",
+				"type": "String"
+			},
+			{
+				"name": "ADRC_UUID",
+				"type": "String"
+			},
+			{
+				"name": "UUID_BELATED",
+				"type": "String"
+			},
+			{
+				"name": "ID_CATEGORY",
+				"type": "String"
+			},
+			{
+				"name": "ADRC_ERR_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "PO_BOX_LOBBY",
+				"type": "String"
+			},
+			{
+				"name": "DELI_SERV_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "DELI_SERV_NUMBER",
+				"type": "String"
+			},
+			{
+				"name": "COUNTY_CODE",
+				"type": "String"
+			},
+			{
+				"name": "COUNTY",
+				"type": "String"
+			},
+			{
+				"name": "TOWNSHIP_CODE",
+				"type": "String"
+			},
+			{
+				"name": "TOWNSHIP",
+				"type": "String"
+			},
+			{
+				"name": "MC_COUNTY",
+				"type": "String"
+			},
+			{
+				"name": "MC_TOWNSHIP",
+				"type": "String"
+			},
+			{
+				"name": "XPCPT",
+				"type": "String"
+			},
+			{
+				"name": "DUNS",
+				"type": "String"
+			},
+			{
+				"name": "DUNSP4",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",
