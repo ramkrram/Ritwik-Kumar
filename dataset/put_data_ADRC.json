@@ -1,0 +1,13 @@
+{
+	"name": "put_data_ADRC",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase_landing_DB",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[dbo].[ADRC]"
+		}
+	}
+}

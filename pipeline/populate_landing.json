@@ -1,3 +1,41 @@
 {
-	"name": "populate_landing"
+	"name": "populate_landing",
+	"properties": {
+		"activities": [
+			{
+				"name": "get_ADRC_FILE",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "AzureDataLakeStoreSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "get_file_ADRC",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "put_data_ADRC",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	}
 }
