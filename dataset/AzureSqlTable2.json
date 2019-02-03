@@ -1,0 +1,6 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"type": "AzureSqlTable"
+	}
+}
