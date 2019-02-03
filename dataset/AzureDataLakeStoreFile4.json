@@ -1,0 +1,26 @@
+{
+	"name": "AzureDataLakeStoreFile4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_link_service",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@concat(item().TABLENAME,'.csv')",
+				"type": "Expression"
+			},
+			"folderPath": "development/landing"
+		}
+	}
+}
