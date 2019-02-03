@@ -1,0 +1,97 @@
+{
+	"name": "input_files_validation",
+	"properties": {
+		"activities": [
+			{
+				"name": "local_input_file_name",
+				"type": "Lookup",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "SqlSource",
+						"sqlReaderStoredProcedureName": "[dbo].[all_tables_name]"
+					},
+					"dataset": {
+						"referenceName": "lkp_local_tab_name",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "local_input_file_name",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('local_input_file_name').output.value",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "GetMetadata1",
+							"type": "GetMetadata",
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "AzureDataLakeStoreFile1",
+									"type": "DatasetReference"
+								},
+								"fieldList": [
+									"childItems",
+									"exists",
+									"itemName",
+									"itemType",
+									"lastModified"
+								]
+							}
+						},
+						{
+							"name": "Filter1",
+							"type": "Filter",
+							"dependsOn": [
+								{
+									"activity": "GetMetadata1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"typeProperties": {
+								"items": {
+									"value": "@activity('GetMetadata1').output.childitems",
+									"type": "Expression"
+								},
+								"condition": {
+									"value": "@endswith(item().name,'.csv')",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

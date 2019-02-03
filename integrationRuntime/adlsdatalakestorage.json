@@ -1,0 +1,11 @@
+{
+	"name": "adlsdatalakestorage",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "AutoResolve"
+			}
+		}
+	}
+}

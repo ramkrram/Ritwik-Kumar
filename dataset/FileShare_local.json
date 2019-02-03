@@ -1,0 +1,36 @@
+{
+	"name": "FileShare_local",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "local_file_system",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "Filename",
+				"type": "String"
+			},
+			{
+				"name": "size",
+				"type": "Int32"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@activity('local_input_file_name').output.value",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

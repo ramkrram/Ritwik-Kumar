@@ -1,0 +1,17 @@
+{
+	"name": "ADLS_link_service",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://adlsgen1storage.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "69cf0f09-b27a-4183-b3cc-3f3b8a180245",
+			"subscriptionId": "844b9775-cc7c-4850-bd18-7fdf7bbca33d",
+			"resourceGroupName": "cloud-shell-storage-centralindia"
+		},
+		"connectVia": {
+			"referenceName": "adlsdatalakestorage",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

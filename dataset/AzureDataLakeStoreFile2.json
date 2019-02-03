@@ -1,0 +1,63 @@
+{
+	"name": "AzureDataLakeStoreFile2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_link_service",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"itemName": {
+				"type": "String"
+			},
+			"type": {
+				"type": "String"
+			},
+			"exists": {
+				"type": "String"
+			},
+			"lastModified": {
+				"type": "String"
+			},
+			"childItems": {
+				"type": "String"
+			}
+		},
+		"type": "AzureDataLakeStoreFile",
+		"structure": [
+			{
+				"name": "itemName",
+				"type": "String"
+			},
+			{
+				"name": "type",
+				"type": "String"
+			},
+			{
+				"name": "exists",
+				"type": "String"
+			},
+			{
+				"name": "lastModified",
+				"type": "DateTime"
+			},
+			{
+				"name": "childItems",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "",
+			"folderPath": "development/landing"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

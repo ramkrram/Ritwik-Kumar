@@ -1,0 +1,29 @@
+{
+	"name": "get_file_from_local",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "local_file_system",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Get_Source_files"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@concat(item().TABLENAME,'.csv')",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

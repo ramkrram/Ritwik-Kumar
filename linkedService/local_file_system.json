@@ -1,0 +1,16 @@
+{
+	"name": "local_file_system",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "//Desktop-dkh8i72/ftp",
+			"userId": "ramkr4151",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwOGM2NmY2Yi1lYzgwLTQ4OWQtOThiYi1hZjU1MmJlZWRjNjciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Local-laptop-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

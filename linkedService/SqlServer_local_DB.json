@@ -1,0 +1,15 @@
+{
+	"name": "SqlServer_local_DB",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=DESKTOP-DKH8I72\\RAMKRSQL;initial catalog=master;user id=sa",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxOGYxOTBiZC01NzVjLTRlMTctYTcxNS05ZTA2MmE2Njg4MWMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Local-laptop-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

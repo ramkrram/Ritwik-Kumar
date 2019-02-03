@@ -1,0 +1,11 @@
+{
+	"name": "lkp_local_tab_name",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Local_db_landing",
+			"type": "LinkedServiceReference"
+		},
+		"type": "SqlServerTable"
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
