@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "get_src_files",
+				"description": "Get all input files",
 				"type": "Lookup",
 				"policy": {
 					"timeout": "7.00:00:00",
