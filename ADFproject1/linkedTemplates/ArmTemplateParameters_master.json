@@ -1,0 +1,102 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFproject1"
+		},
+		"AzureDataLakeAnalytics_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase_landing_DB_connectionString": {
+			"value": ""
+		},
+		"Local_db_landing_connectionString": {
+			"value": ""
+		},
+		"Local_laptop_linkservice_password": {
+			"value": ""
+		},
+		"SqlServer_local_DB_connectionString": {
+			"value": ""
+		},
+		"local_file_system_password": {
+			"value": ""
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_folderPath": {
+			"value": "development/landing"
+		},
+		"AzureDataLakeStoreFile2_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureDataLakeStoreFile2_properties_typeProperties_folderPath": {
+			"value": "development/landing"
+		},
+		"AzureDataLakeStoreFile3_properties_typeProperties_fileName": {
+			"value": "filter_data.txt"
+		},
+		"AzureDataLakeStoreFile3_properties_typeProperties_folderPath": {
+			"value": "development/output"
+		},
+		"FileShare1_properties_typeProperties_fileName": {
+			"value": "@concat(activity('local_input_file_name').output.value),'.csv')"
+		},
+		"FileShare1_properties_typeProperties_folderPath": {
+			"value": ""
+		},
+		"FileShare_local_properties_typeProperties_fileName": {
+			"value": "@activity('local_input_file_name').output.value"
+		},
+		"get_file_from_local_properties_typeProperties_fileName": {
+			"value": "@concat(item().TABLENAME,'.csv')"
+		},
+		"metadata_input_detls_properties_typeProperties_fileName": {
+			"value": "@concat(item().name,'.csv')"
+		},
+		"metadata_input_detls_properties_typeProperties_folderPath": {
+			"value": "development/landing"
+		},
+		"put_file_adls_properties_typeProperties_fileName": {
+			"value": "@concat(item().TABLENAME,'.csv')"
+		},
+		"put_file_adls_properties_typeProperties_folderPath": {
+			"value": "development/landing"
+		},
+		"ADLS_link_service_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://adlsgen1storage.azuredatalakestore.net/webhdfs/v1"
+		},
+		"ADLS_link_service_properties_typeProperties_tenant": {
+			"value": "69cf0f09-b27a-4183-b3cc-3f3b8a180245"
+		},
+		"ADLS_link_service_properties_typeProperties_subscriptionId": {
+			"value": "844b9775-cc7c-4850-bd18-7fdf7bbca33d"
+		},
+		"ADLS_link_service_properties_typeProperties_resourceGroupName": {
+			"value": "cloud-shell-storage-centralindia"
+		},
+		"AzureDataLakeAnalytics_properties_typeProperties_accountName": {
+			"value": "adlstcs"
+		},
+		"AzureDataLakeAnalytics_properties_typeProperties_servicePrincipalId": {
+			"value": "eb8492d0-54d7-4161-b7a2-e6f7556db3f9"
+		},
+		"AzureDataLakeAnalytics_properties_typeProperties_tenant": {
+			"value": "69cf0f09-b27a-4183-b3cc-3f3b8a180245"
+		},
+		"AzureDataLakeAnalytics_properties_typeProperties_subscriptionId": {
+			"value": "844b9775-cc7c-4850-bd18-7fdf7bbca33d"
+		},
+		"AzureDataLakeAnalytics_properties_typeProperties_resourceGroupName": {
+			"value": "cloud-shell-storage-centralindia"
+		},
+		"Local_laptop_linkservice_properties_typeProperties_userId": {
+			"value": "ramkr4151"
+		},
+		"local_file_system_properties_typeProperties_userId": {
+			"value": "ramkr4151"
+		}
+	}
+}
